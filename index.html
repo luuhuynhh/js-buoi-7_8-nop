@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Buổi 6</title>
+     <!-- lin fontawesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- link gg font hind -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;700&display=swap" rel="stylesheet">
+ 
+     <!-- link boostrap -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+     <!-- my css -->
+     <link rel="stylesheet" href="./css/style.css">
+ 
+</head>
+<body>
+    <div class="container" id="myContent">
+      <div class="row">
+        <div class="input-group mb-3 col-lg-8">
+          <input id="txtSoN" type="number" class="form-control" placeholder="Nhập số n">
+        </div>
+        <div class="input-group mb-3 col-lg-4">
+          <button id="btnThemSo" type="button" class="btn btn-secondary">Thêm số</button>
+        </div>
+      </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+          </div>
+          <input id="txtMangSo" type="text" class="form-control" aria-describedby="basic-addon1">
+        </div>
+
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  #1 Tổng số dương
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnTinhTong" type="button" class="btn btn-secondary">Tính tổng</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtTong" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  #2 Đếm số dương
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnDemSoDuong" type="button" class="btn btn-secondary">Đếm số dương</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtSoDuong" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  #3 Tìm số nhỏ nhất
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnTimSoNhoNhat" type="button" class="btn btn-secondary">Tìm số nhỏ nhất</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtSoNhoNhat" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                  #4 Tìm số dương nhỏ nhất
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnTimSoDuongNhoNhat" type="button" class="btn btn-secondary">Tìm số dương nhỏ nhất</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtSoDuongNhoNhat" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                  #5 Tìm số chẵn cuối cùng
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnTimSoChanCC" type="button" class="btn btn-secondary">Tìm số chẵn cuối cùng</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtSoChanCC" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                  #6 Đổi chỗ
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="row">
+                  <div class="input-group mb-3 col-lg-6">
+                    <input id="txtViTri1" type="number" class="form-control" placeholder="Nhập vị trí 1">
+                  </div>
+                  <div class="input-group mb-3 col-lg-6">
+                    <input id="txtViTri2" type="number" class="form-control" placeholder="Nhập vị trí 2">
+                  </div>
+                </div>
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnDoiCho" type="button" class="btn btn-secondary">Đổi chỗ</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtDoiCho" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+                  #7 Sắp xếp tăng dần
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnSapXep" type="button" class="btn btn-secondary">Sắp xếp</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtSapXep" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
+                  #8 Tìm số nguyên tố đầu tiên
+                </button>
+              </h5>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnTimSoNTDauTien" type="button" class="btn btn-secondary">Tìm số nguyên tố đầu tiên</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtSoNTDauTien" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
+                  #9 Đếm số nguyên
+                </button>
+              </h5>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnDemSoNguyen" type="button" class="btn btn-secondary">Đếm số nguyên</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtDemSoNguyen" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
+                  #10 So sánh số lượng âm và dương
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTen" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <div class="row">
+                  <div class="input-group mb-3 col-lg-8">
+                    <input id="txtSoN_" type="number" class="form-control" placeholder="Nhập số n">
+                  </div>
+                  <div class="input-group mb-3 col-lg-4">
+                    <button id="btnThemSo_" type="button" class="btn btn-secondary">Thêm số</button>
+                  </div>
+                </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                    </div>
+                    <input id="txtMangSo_" type="text" class="form-control" aria-describedby="basic-addon1">
+                  </div>
+                <div class="input-group mb-3 col-lg-4">
+                  <button id="btnSoSanh" type="button" class="btn btn-secondary">So sánh</button>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-hand-point-right"></i></span>
+                  </div>
+                  <input id="txtSoSanh" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
